@@ -4,7 +4,9 @@ This repository contains all the scripts created whilst learning different aspec
 
 ## Libraries
 
-1. scikit-learn
+1. Numpy
+2. Matplotlib
+3. Scikit-learn
 
 ## Authors
 
