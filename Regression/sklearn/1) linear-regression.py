@@ -38,7 +38,7 @@ df = df [['Adj. Close', 'HL_PCT', 'PCT_change', 'Adj. Volume']]
 forecast_col = 'Adj. Close'
 df.fillna(-99999, inplace=True) # replace NA data with massive outlier instead of removing whole row of data if NA
 
-forecast_out = int(math.ceil(0.01*len(df))) # number of days into future to predict, using 10% of total dataset
+forecast_out = int(math.ceil(0.1*len(df))) # number of days into future to predict, using 10% of total dataset
 
 df['label'] = df[forecast_col].shift(-forecast_out) # shift all data dependent on number of days out predicted
 df.dropna(inplace=True) # drop any predicted rows so dont use linear regression on predicted data points, only actual data values
